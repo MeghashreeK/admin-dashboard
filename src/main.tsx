@@ -9,9 +9,9 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { worker } from "./utility/browser";
 
 const theme = createTheme();
-if (import.meta.env.DEV) {
+
   worker.start();
-}
+
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
