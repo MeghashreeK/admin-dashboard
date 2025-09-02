@@ -10,8 +10,9 @@ import { worker } from "./utility/browser";
 
 const theme = createTheme();
 
-  worker.start();
-
+worker.start({
+  onUnhandledRequest: "bypass", // prevents errors if some requests aren’t mocked
+});
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
